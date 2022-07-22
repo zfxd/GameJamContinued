@@ -8,15 +8,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5;
     [SerializeField] private float jumpHeight = 10;
     [SerializeField] private float playerScale = 3;
-
+    [SerializeField]private LayerMask groundLayer;
+    
     private Rigidbody2D body;
     private Animator anim;
-    [SerializeField] private bool grounded = true;
+    private BoxCollider2D boxCollider;
 
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -35,21 +37,27 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-playerScale, playerScale, 1);
         }
 
-        if(Input.GetKey(KeyCode.UpArrow) && grounded)
+        if(Input.GetKey(KeyCode.UpArrow) && isGrounded())
             Jump();
 
         anim.SetBool("run", horizontalInput != 0);
+        anim.SetBool("grounded", isGrounded());
+        anim.SetBool("falling", body.velocity.y < -0.01f);
     }
 
     // Use the Brackeys video for jumping!
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, jumpHeight);
-        grounded = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        grounded = true;
+    }
+
+    private bool isGrounded()
+    {
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        return raycastHit.collider != null;
     }
 }
