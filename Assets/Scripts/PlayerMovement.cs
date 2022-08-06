@@ -60,4 +60,10 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
+
+    // Called by Animation Events to re-enable movement after lockout (casting spells/damage)
+    private void Reenable()
+    {
+        this.enabled = true;
+    }
 }
