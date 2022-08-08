@@ -7,8 +7,8 @@ public class Health : MonoBehaviour
     [SerializeField] private float startHealth;
     public float currHealth {get; private set;}
     private Animator anim;
-    private PlayerMovement move;
     private Rigidbody2D body;
+    private PlayerMovement move;
     
 
     [SerializeField] private float knockbackForce;
@@ -17,9 +17,9 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         currHealth = startHealth;
+        body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         move = GetComponent<PlayerMovement>();
-        body = GetComponent<Rigidbody2D>();
     }
 
     public void TakeDamage(float _damage)
@@ -28,20 +28,19 @@ public class Health : MonoBehaviour
         if (currHealth > 0)
         {
             anim.SetTrigger("hurt");
-            // knockback
-            anim.SetBool("grounded", true);
-            move.enabled = false;
-            body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * knockbackForce, knockbackHeight);
-            // iframes
+            // LoseControl and Knockback handled by Animation Events
+            // iframes? 
         }
         else
         {
             anim.SetTrigger("die");
             // Lose
-            
-            move.enabled = false;
-            anim.SetBool("grounded", true);
         }
+    }
+
+    private void Knockback()
+    {
+        body.velocity = new Vector2(-Mathf.Sign(transform.localScale.x) * knockbackForce, knockbackHeight);
     }
 
     // temp "hurt yourself" button

@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerScale = 3;
     [SerializeField]private LayerMask groundLayer;
     
+    private PlayerAttack atk;
     private Rigidbody2D body;
     private Animator anim;
     private BoxCollider2D boxCollider;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        atk = GetComponent<PlayerAttack>();
     }
 
     // Update is called once per frame
@@ -51,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         body.velocity = new Vector2(body.velocity.x, jumpHeight);
     }
 
+    // what was this again
     private void OnCollisionEnter2D(Collision2D collision)
     {
     }
@@ -61,9 +64,17 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit.collider != null;
     }
 
+
+    public void LoseControl()
+    {
+        anim.SetBool("grounded", true);
+        this.enabled = false;
+        atk.enabled = false;
+    }
     // Called by Animation Events to re-enable movement after lockout (casting spells/damage)
-    private void Reenable()
+    public void RegainControl()
     {
         this.enabled = true;
+        atk.enabled = true;
     }
 }

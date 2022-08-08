@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] Image red;
-    [SerializeField] Image blue;
-    [SerializeField] Image yellow;
+    [SerializeField] Image redOrb;
+    [SerializeField] Image blueOrb;
+    [SerializeField] Image yellowOrb;
     [SerializeField] Image centre;
 
     public State color {get; private set;}
@@ -18,16 +18,26 @@ public class PlayerAttack : MonoBehaviour
                 PURPLE, 
                 GREEN, 
                 ORANGE}
+
+    // Colors
     private Color inactive = new Color(0.8f, 0.8f, 0.8f, 1);
     private Color active = Color.white;
-    // Reference to playermove?
+    private Color orange = new Color(1.0f, 0.64f, 0.0f, 1);
+    private Color purple = new Color(0.45f, 0f, 1.0f, 1);
+    private Color grey = new Color(0.32f, 0.32f, 0.32f, 1);
+    private Color blue = new Color(0f,0f,0.8f,1);
+    private Color red = new Color(0.7f,0f,0f,1);
+    private Color green = new Color(0f,0.7f,0f,1);
+    
+    // Component references
+    private Animator anim;
 
     
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         color = State.EMPTY;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,51 +48,142 @@ public class PlayerAttack : MonoBehaviour
           if (Input.GetKey(KeyCode.A))
         {
             // Change sprite
-            blue.color = active;
+            blueOrb.color = active;
 
             // Change state and color
-
+            switch (color)
+            {
+                case State.EMPTY:
+                    BlueState();
+                    break;
+                case State.RED:
+                    PurpleState();
+                    break;
+                case State.YELLOW:
+                    GreenState();
+                    break;
+            }
         }
         else
         {
             // Reset
-            blue.color = inactive;
+            blueOrb.color = inactive;
         }
 
         // W: Red
         if (Input.GetKey(KeyCode.W))
         {
             // Change Sprite
-            red.color = active;
+            redOrb.color = active;
+
+            // Change state and color
+            switch (color)
+            {
+                case State.EMPTY:
+                    RedState();
+                    break;
+                case State.BLUE:
+                    PurpleState();
+                    break;
+                case State.YELLOW:
+                    OrangeState();
+                    break;
+            }
         }
         else 
         {
             // Reset Sprite
-            red.color = inactive;
+            redOrb.color = inactive;
         }
 
         // D: Yellow
         if (Input.GetKey(KeyCode.D))
         {
             // Change Sprite
-            yellow.color = active;
+            yellowOrb.color = active;
+
+            // Change state and color
+            switch (color)
+            {
+                case State.EMPTY:
+                    YellowState();
+                    break;
+                case State.BLUE:
+                    GreenState();
+                    break;
+                case State.RED:
+                    OrangeState();
+                    break;
+            }
         }
         else
         {
             // Reset Sprite
-            yellow.color = inactive;
+            yellowOrb.color = inactive;
         }
 
         // Shift: Cancel
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            // Change state and color
+            BlankState();
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
             // Most fire off once and return to normal
+            switch(color)
+            {
+                case State.BLUE:
+                    anim.SetTrigger("atkBlue");
+                    break;
+            }
+            BlankState();
             // Special case: FIRE.
         }
     }
+
+    private void RedState()
+    {
+        centre.color = red;
+        color = State.RED;
+    }
+
+    private void BlueState()
+    {
+        centre.color = blue;
+        color = State.BLUE;
+    }
+
+    private void YellowState()
+    {
+        centre.color = Color.yellow;
+        color = State.YELLOW;
+    }
+
+    private void OrangeState()
+    {
+        centre.color = orange;
+        color = State.ORANGE;
+    }
+
+    private void PurpleState()
+    {
+        centre.color = purple;
+        color = State.PURPLE;
+    }
+
+    private void GreenState()
+    {
+        centre.color = green;
+        color = State.GREEN;
+    }
+
+    private void BlankState()
+    {
+        centre.color = grey;
+        color = State.EMPTY;
+    }
 }
+
+// Red: Use a coroutine, and disable the atk function until the coroutine ends
+// Coroutines are NOT stopped when monobehavior.enable = false

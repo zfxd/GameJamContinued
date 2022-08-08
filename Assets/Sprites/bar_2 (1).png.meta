@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67c3c29bf0d084b098facfe59fdee2bb
+guid: c08c63e3571da7246b49c3759bbf0a81
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,164 +100,89 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Small jump_0
+      name: bar_2 (1)_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 163
-        width: 16
-        height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 28
+        y: 58
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f195befee9162461f84d4f418dfbae4f
-      internalID: 4882234867273668546
+      spriteID: d110c74f7b56a354b9096fb3f77b2c95
+      internalID: 1118698102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small jump_1
+      name: bar_2 (1)_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 139
-        width: 21
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 1
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f4e2f3c6dc3419890bf6cf00aa95bb
-      internalID: 6572920738271466481
+      spriteID: a1424fba4c8b2624f9ee5af21599b161
+      internalID: -1641180452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small jump_2
+      name: bar_2 (1)_2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 112
-        width: 21
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 12
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49440082225bb4e469158ce25ddb6b5a
-      internalID: -5279011549525559868
+      spriteID: 2f47cc953c083a04ebbdfe4bbcff7b4e
+      internalID: -1774895868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small jump_3
+      name: bar_2 (1)_3
       rect:
         serializedVersion: 2
-        x: 16
-        y: 85
-        width: 21
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 58
+        y: 1
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85517a96168514f5993aaf82e65fae71
-      internalID: -6132159568333356116
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small jump_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 55
-        width: 21
-        height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9bc0e494b7884581a2e9a0b8736c228
-      internalID: -6797516704556139745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small jump_6
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 27
-        width: 39
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 9, y: 0, z: 10, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33591de2af8404c02843e716d6ba3ff7
-      internalID: -3493947179262993843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small jump_9
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 0
-        width: 43
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 11, y: 0, z: 12, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 694a1ffee3999477c809a1494bcc6496
-      internalID: -612245979477154957
+      spriteID: fc0039eb1464b6149aab7309c3c1f658
+      internalID: -1160205333
       vertices: []
       indices: 
       edges: []
@@ -273,13 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Small jump_3: -6132159568333356116
-      Small jump_0: 4882234867273668546
-      Small jump_4: -6797516704556139745
-      Small jump_9: -612245979477154957
-      Small jump_1: 6572920738271466481
-      Small jump_2: -5279011549525559868
-      Small jump_6: -3493947179262993843
+      bar_2 (1)_1: -1641180452
+      bar_2 (1)_2: -1774895868
+      bar_2 (1)_0: 1118698102
+      bar_2 (1)_3: -1160205333
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
