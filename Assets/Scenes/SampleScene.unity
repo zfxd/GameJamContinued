@@ -134,7 +134,8 @@ GameObject:
   - component: {fileID: 108598174}
   - component: {fileID: 108598175}
   - component: {fileID: 108598176}
-  m_Layer: 0
+  - component: {fileID: 108598177}
+  m_Layer: 6
   m_Name: AttackSquare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,8 +226,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.3, y: 0.45}
-    newSize: {x: 0.14, y: 0.14}
+    oldSize: {x: 1.37, y: 0.46023437}
+    newSize: {x: 1.37, y: 0.46023437}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -234,6 +235,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!210 &108598177
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108598173}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!1 &123174272
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +754,7 @@ GameObject:
   - component: {fileID: 1031670581}
   - component: {fileID: 1031670582}
   - component: {fileID: 1031670583}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}

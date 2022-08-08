@@ -136,6 +136,19 @@ public class PlayerAttack : MonoBehaviour
                 case State.BLUE:
                     anim.SetTrigger("atkBlue");
                     break;
+                case State.YELLOW:
+                    anim.SetTrigger("atkYellow");
+                    break;
+                case State.GREEN:
+                    anim.SetTrigger("atkGreen");
+                    break;
+                case State.ORANGE:
+                    anim.SetTrigger("atkOrange");
+                    break;
+                case State.PURPLE:
+                    anim.SetTrigger("atkPurple");
+                    break;
+                // what to do for red...?
             }
             BlankState();
             // Special case: FIRE.
