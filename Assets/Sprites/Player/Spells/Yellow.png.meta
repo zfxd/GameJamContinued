@@ -109,10 +109,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,10 +130,10 @@ TextureImporter:
         serializedVersion: 2
         x: 85
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,10 +151,10 @@ TextureImporter:
         serializedVersion: 2
         x: 170
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,10 +172,10 @@ TextureImporter:
         serializedVersion: 2
         x: 255
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Yellow sheet_4
       rect:
         serializedVersion: 2
-        x: 340
+        x: 347
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,12 +212,12 @@ TextureImporter:
       name: Yellow sheet_5
       rect:
         serializedVersion: 2
-        x: 425
+        x: 454
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: Yellow sheet_6
       rect:
         serializedVersion: 2
-        x: 510
+        x: 568
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.54471695, y: -0.10888047}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: Yellow sheet_7
       rect:
         serializedVersion: 2
-        x: 595
+        x: 652
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: Yellow sheet_8
       rect:
         serializedVersion: 2
-        x: 680
+        x: 737
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,12 +296,12 @@ TextureImporter:
       name: Yellow sheet_9
       rect:
         serializedVersion: 2
-        x: 765
+        x: 822
         y: 0
-        width: 85
+        width: 28
         height: 23
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

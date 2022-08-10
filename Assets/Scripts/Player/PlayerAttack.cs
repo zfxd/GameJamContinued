@@ -32,6 +32,9 @@ public class PlayerAttack : MonoBehaviour
     // Component references
     private Animator anim;
 
+    // Making attacks work
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject[] yellowProjectiles;
     
 
     void Awake()
@@ -196,6 +199,40 @@ public class PlayerAttack : MonoBehaviour
         centre.color = grey;
         color = State.EMPTY;
     }
+    
+
+    // Do I need these?
+    private void atkRed()
+    {
+        
+    }
+   
+    private void atkBlue()
+    {
+        
+    }
+
+    private void atkYellow()
+    {
+        yellowProjectiles[0].transform.position = firePoint.position;
+        yellowProjectiles[0].GetComponent<YellowProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));      
+    }
+
+    private void atkOrange()
+    {
+        
+    }
+
+    private void atkPurple()
+    {
+        
+    }
+
+    private void atkGreen()
+    {
+        
+    }
+
 }
 
 // Red: Use a coroutine, and disable the atk function until the coroutine ends
