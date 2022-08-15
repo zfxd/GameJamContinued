@@ -34,7 +34,9 @@ public class PlayerAttack : MonoBehaviour
 
     // Making attacks work
     [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject[] yellowProjectiles;
+    [SerializeField] private GameObject[] greenPuddles;
     
 
     void Awake()
@@ -214,8 +216,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void atkYellow()
     {
-        yellowProjectiles[0].transform.position = firePoint.position;
-        yellowProjectiles[0].GetComponent<YellowProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));      
+        yellowProjectiles[FindInList(yellowProjectiles)].transform.position = firePoint.position;
+        yellowProjectiles[FindInList(yellowProjectiles)].GetComponent<YellowProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));      
     }
 
     private void atkOrange()
@@ -230,7 +232,18 @@ public class PlayerAttack : MonoBehaviour
 
     private void atkGreen()
     {
-        
+        greenPuddles[0].transform.position = spawnPoint.position;
+        greenPuddles[0].GetComponent<GreenPuddle>().SetDirection(Mathf.Sign(transform.localScale.x)); 
+    }
+
+    private int FindInList(GameObject[] list)
+    {
+        for (int i = 0; i < list.Length; i++)
+        {
+            if (!list[i].activeInHierarchy)
+                return i;
+        }
+        return 0;
     }
 
 }
