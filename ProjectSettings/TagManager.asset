@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Blue
   - Yellow
+  - Red
+  - Green
+  - Purple
+  - Orange
   layers:
   - Default
   - TransparentFX
@@ -13,7 +17,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - Player
+  - Attacks
   - 
   - 
   - 

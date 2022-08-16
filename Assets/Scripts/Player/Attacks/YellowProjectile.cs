@@ -5,6 +5,7 @@ using UnityEngine;
 public class YellowProjectile : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float _lifetime;
     private bool hit;
     private float direction;
     private float lifetime;
@@ -27,7 +28,7 @@ public class YellowProjectile : MonoBehaviour
         transform.Translate(movementSpeed, 0, 0);
 
         lifetime += Time.deltaTime;
-        if (lifetime > 1)
+        if (lifetime > _lifetime)
             Deactivate();
     }
 

@@ -37,6 +37,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject[] yellowProjectiles;
     [SerializeField] private GameObject[] greenPuddles;
+    [SerializeField] private GameObject[] purpleClouds;
     
 
     void Awake()
@@ -217,23 +218,24 @@ public class PlayerAttack : MonoBehaviour
     private void atkYellow()
     {
         yellowProjectiles[FindInList(yellowProjectiles)].transform.position = firePoint.position;
-        yellowProjectiles[FindInList(yellowProjectiles)].GetComponent<YellowProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));      
+        yellowProjectiles[FindInList(yellowProjectiles)].GetComponent<YellowProjectile>().SetDirection(Mathf.Sign(transform.localScale.x)); // err can you shorten this      
     }
 
     private void atkOrange()
     {
-        
+        RaycastHit hit;
     }
 
     private void atkPurple()
     {
-        
+        purpleClouds[FindInList(purpleClouds)].transform.position = spawnPoint.position;
+        purpleClouds[FindInList(purpleClouds)].GetComponent<PurpleCloud>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
     private void atkGreen()
     {
-        greenPuddles[0].transform.position = spawnPoint.position;
-        greenPuddles[0].GetComponent<GreenPuddle>().SetDirection(Mathf.Sign(transform.localScale.x)); 
+        greenPuddles[FindInList(greenPuddles)].transform.position = spawnPoint.position;
+        greenPuddles[FindInList(greenPuddles)].GetComponent<GreenPuddle>().SetDirection(Mathf.Sign(transform.localScale.x)); // same here
     }
 
     private int FindInList(GameObject[] list)
