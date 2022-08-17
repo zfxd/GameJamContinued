@@ -141,6 +141,9 @@ public class PlayerAttack : MonoBehaviour
             // Most fire off once and return to normal
             switch(color)
             {
+                case State.RED:
+                    StartCoroutine(atkRed());
+                    break;
                 case State.BLUE:
                     anim.SetTrigger("atkBlue");
                     break;
@@ -159,7 +162,6 @@ public class PlayerAttack : MonoBehaviour
                 // what to do for red...?
             }
             BlankState();
-            // Special case: FIRE.
         }
     }
 
@@ -207,9 +209,13 @@ public class PlayerAttack : MonoBehaviour
     
 
     // Do I need these?
-    private void atkRed()
+    private IEnumerator atkRed()
     {
-        
+        this.enabled = false;
+        Debug.Log("Red START");
+        yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
+        Debug.Log("Red END");
+        this.enabled = true;
     }
    
     private void atkBlue()
