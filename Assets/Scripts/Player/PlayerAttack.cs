@@ -38,6 +38,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject[] yellowProjectiles;
     [SerializeField] private GameObject[] greenPuddles;
     [SerializeField] private GameObject[] purpleClouds;
+    [SerializeField] private GameObject[] orangeExplosion;
+    private GameObject currSpell;
     
 
     void Awake()
@@ -217,19 +219,34 @@ public class PlayerAttack : MonoBehaviour
 
     private void atkYellow()
     {
-        yellowProjectiles[FindInList(yellowProjectiles)].transform.position = firePoint.position;
-        yellowProjectiles[FindInList(yellowProjectiles)].GetComponent<YellowProjectile>().SetDirection(Mathf.Sign(transform.localScale.x)); // err can you shorten this      
+        currSpell = yellowProjectiles[FindInList(yellowProjectiles)];
+        currSpell.transform.position = firePoint.position;
+        currSpell.GetComponent<YellowProjectile>().SetDirection(Mathf.Sign(transform.localScale.x));  
     }
 
     private void atkOrange()
     {
-        RaycastHit hit;
+        Vector2 dir = new Vector2(transform.localScale.x, 0);
+        Vector3 dirDebug = new Vector3(transform.localScale.x, 0, 0);
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.transform.position, dir);
+        if (hit.collider != null)
+        {
+            Debug.DrawRay(firePoint.transform.position, dirDebug * hit.distance/3, Color.yellow, 3);
+            currSpell = orangeExplosion[FindInList(orangeExplosion)];
+            currSpell.transform.position = hit.point;
+            currSpell.gameObject.SetActive(true);
+
+        }
+        else{
+            Debug.DrawRay(firePoint.transform.position, dirDebug * 1000, Color.white, 3);
+        }
     }
 
     private void atkPurple()
     {
-        purpleClouds[FindInList(purpleClouds)].transform.position = spawnPoint.position;
-        purpleClouds[FindInList(purpleClouds)].GetComponent<PurpleCloud>().SetDirection(Mathf.Sign(transform.localScale.x));
+        currSpell = purpleClouds[FindInList(purpleClouds)];
+        currSpell.transform.position = spawnPoint.position;
+        currSpell.GetComponent<PurpleCloud>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
     private void atkGreen()
