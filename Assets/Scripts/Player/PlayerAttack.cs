@@ -31,6 +31,7 @@ public class PlayerAttack : MonoBehaviour
     
     // Component references
     private Animator anim;
+    private Animator fireAnim;
 
     // Making attacks work
     [SerializeField] private Transform firePoint;
@@ -39,6 +40,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject[] greenPuddles;
     [SerializeField] private GameObject[] purpleClouds;
     [SerializeField] private GameObject[] orangeExplosion;
+    [SerializeField] private GameObject redFire;
     private GameObject currSpell;
     
 
@@ -46,6 +48,7 @@ public class PlayerAttack : MonoBehaviour
     {
         color = State.EMPTY;
         anim = GetComponent<Animator>();
+        fireAnim = redFire.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -159,7 +162,6 @@ public class PlayerAttack : MonoBehaviour
                 case State.PURPLE:
                     anim.SetTrigger("atkPurple");
                     break;
-                // what to do for red...?
             }
             BlankState();
         }
@@ -212,9 +214,12 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator atkRed()
     {
         this.enabled = false;
+        redFire.gameObject.SetActive(true);
+        fireAnim.SetBool("firing", true);
         Debug.Log("Red START");
         yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
         Debug.Log("Red END");
+        fireAnim.SetBool("firing", false);
         this.enabled = true;
     }
    
