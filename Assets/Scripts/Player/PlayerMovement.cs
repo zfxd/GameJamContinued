@@ -69,6 +69,10 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetBool("grounded", true);
         this.enabled = false;
+
+        // If breathing fire, stop
+        atk.StopAllCoroutines();
+        atk.endRed();
         atk.enabled = false;
     }
     // Called by Animation Events to re-enable movement after lockout (casting spells/damage)

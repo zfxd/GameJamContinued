@@ -218,7 +218,15 @@ public class PlayerAttack : MonoBehaviour
         fireAnim.SetBool("firing", true);
         Debug.Log("Red START");
         yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
-        Debug.Log("Red END");
+        endRed();
+    }
+    // Called by other events such as taking damage to end
+    // the coroutine prematurely but elegantly
+    // !! however this is being called every time the player loses control
+    // - casting other spells is the most notable instance
+    // Will this cause issues?
+    public void endRed()
+    {
         fireAnim.SetBool("firing", false);
         this.enabled = true;
     }
