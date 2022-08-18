@@ -216,9 +216,12 @@ public class PlayerAttack : MonoBehaviour
         this.enabled = false;
         redFire.gameObject.SetActive(true);
         fireAnim.SetBool("firing", true);
-        Debug.Log("Red START");
+        anim.SetBool("firing", true);
         yield return new WaitUntil(() => !Input.GetKey(KeyCode.Space));
         endRed();
+        this.enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        this.enabled = true;
     }
     // Called by other events such as taking damage to end
     // the coroutine prematurely but elegantly
@@ -228,6 +231,7 @@ public class PlayerAttack : MonoBehaviour
     public void endRed()
     {
         fireAnim.SetBool("firing", false);
+        anim.SetBool("firing", false);
         this.enabled = true;
     }
    
