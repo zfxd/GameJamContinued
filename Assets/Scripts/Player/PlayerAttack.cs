@@ -221,7 +221,7 @@ public class PlayerAttack : MonoBehaviour
         endRed();
         this.enabled = false;
         yield return new WaitForSeconds(0.5f);
-        this.enabled = true;
+        this.enabled = true;        
     }
     // Called by other events such as taking damage to end
     // the coroutine prematurely but elegantly

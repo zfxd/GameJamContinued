@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 108598175}
   - component: {fileID: 108598176}
   - component: {fileID: 108598177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackBlue
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 471815167}
   - component: {fileID: 471815168}
   - component: {fileID: 471815169}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackGreen
   m_TagString: Green
   m_Icon: {fileID: 0}
@@ -1440,7 +1440,7 @@ GameObject:
   - component: {fileID: 1031670581}
   - component: {fileID: 1031670582}
   - component: {fileID: 1031670583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2103,6 +2103,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 265840456}
     m_Modifications:
+    - target: {fileID: 1037925351411393032, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1037925351411393034, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2154,6 +2158,34 @@ PrefabInstance:
     - target: {fileID: 1037925351411393035, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037925351411393078, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037925351411393078, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.069767445
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037925351411393078, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037925351411393078, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037925351411393078, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037925351411393078, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037925351411393078, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
@@ -2889,7 +2921,7 @@ GameObject:
   - component: {fileID: 1943475294}
   - component: {fileID: 1943475295}
   - component: {fileID: 1943475296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AttackRed
   m_TagString: Red
   m_Icon: {fileID: 0}
