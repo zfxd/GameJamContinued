@@ -9,6 +9,10 @@ public class Health : MonoBehaviour
     private Animator anim;
     private Rigidbody2D body;
     private PlayerMovement move;
+
+    [SerializeField] private float iFrameDuration;
+    [SerializeField] private float numFlashes;
+    private SpriteRenderer sprite;
     
 
     [SerializeField] private float knockbackForce;
@@ -20,6 +24,7 @@ public class Health : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         move = GetComponent<PlayerMovement>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     public void TakeDamage(float _damage)
@@ -29,12 +34,13 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("hurt");
             // LoseControl and Knockback handled by Animation Events
-            // iframes? 
+            // iframes
+            StartCoroutine(Invulnerability());
         }
         else
         {
             anim.SetTrigger("die");
-            // Lose
+            // Lose condition TODO
         }
     }
 
@@ -48,5 +54,21 @@ public class Health : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
             TakeDamage(1);
+    }
+
+    private IEnumerator Invulnerability()
+    {
+        Physics2D.IgnoreLayerCollision(7,8,true);
+        for(int i = 0; i < numFlashes; i++)
+        {
+            Color temp = sprite.color;
+            temp.a = 0.5f;
+            sprite.color = temp;
+            yield return new WaitForSeconds(iFrameDuration / (numFlashes * 2));
+            temp.a = 1.0f;
+            sprite.color = temp;
+            yield return new WaitForSeconds(iFrameDuration / (numFlashes * 2));
+        }
+        Physics2D.IgnoreLayerCollision(7,8,false);
     }
 }

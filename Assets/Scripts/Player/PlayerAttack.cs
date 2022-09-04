@@ -49,6 +49,7 @@ public class PlayerAttack : MonoBehaviour
         color = State.EMPTY;
         anim = GetComponent<Animator>();
         fireAnim = redFire.GetComponent<Animator>();
+        // Ignore layer collisions;
     }
 
     // Update is called once per frame
@@ -230,7 +231,8 @@ public class PlayerAttack : MonoBehaviour
     // Will this cause issues?
     public void endRed()
     {
-        fireAnim.SetBool("firing", false);
+        if (fireAnim.gameObject.activeSelf)
+            fireAnim.SetBool("firing", false);
         anim.SetBool("firing", false);
         this.enabled = true;
     }
