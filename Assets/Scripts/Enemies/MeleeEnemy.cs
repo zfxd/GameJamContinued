@@ -6,7 +6,6 @@ public class MeleeEnemy : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
-    [SerializeField] private float damage;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private BoxCollider2D boxCollider;
     private Animator anim;
@@ -38,10 +37,6 @@ public class MeleeEnemy : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(
             boxCollider.bounds.center + transform.right * range * transform.localScale.x,
             boxCollider.bounds.size, 0, Vector2.left, 0, playerLayer);
-        if (hit.collider != null)
-        {
-            Debug.Log("PLAYER DETECTED");
-        }
         return hit.collider != null;
     }
 

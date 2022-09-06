@@ -13,7 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAttack atk;
     private Rigidbody2D body;
     private Animator anim;
-    private BoxCollider2D boxCollider;
+    private BoxCollider2D boxCollider;  
+    private Health health;
 
     void Awake()
     {
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         atk = GetComponent<PlayerAttack>();
+        health = GetComponent<Health>();
     }
 
     // Update is called once per frame
