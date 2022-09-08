@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("falling", body.velocity.y < -0.01f);
     }
 
-    // Use the Brackeys video for jumping!
+    // Use the Brackeys video for jumping! (I'm not sure if I actually did lol)
     private void Jump()
     {
         body.velocity = new Vector2(body.velocity.x, jumpHeight);
@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     // what was this again
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
     }
 
     private bool isGrounded()
@@ -65,8 +66,6 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
-
-
     public void LoseControl()
     {
         anim.SetBool("grounded", true);

@@ -41,6 +41,7 @@ public class Health : MonoBehaviour
         {
             anim.SetTrigger("die");
             // Lose condition TODO
+            // check that the PLAYER died!
         }
     }
 
@@ -58,7 +59,8 @@ public class Health : MonoBehaviour
 
     private IEnumerator Invulnerability()
     {
-        Physics2D.IgnoreLayerCollision(7,8,true);
+        // Made invulnerable on collision
+
         for(int i = 0; i < numFlashes; i++)
         {
             Color temp = sprite.color;
@@ -70,5 +72,17 @@ public class Health : MonoBehaviour
             yield return new WaitForSeconds(iFrameDuration / (numFlashes * 2));
         }
         Physics2D.IgnoreLayerCollision(7,8,false);
+        Physics2D.IgnoreLayerCollision(6,8,false);
+        // Just turn both back on don't need to care
+    }
+
+    // Ignore collision w/ player, wait a bit, then despawn
+    private IEnumerator EnemyDeath()
+    {
+        Physics2D.IgnoreLayerCollision(7,8,true);
+        Physics2D.IgnoreLayerCollision(6,8,true); // Enemy and attack 
+        // TODO wait a while then despawn.
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("TODO DESPAWN HERE"); 
     }
 }
