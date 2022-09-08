@@ -79,6 +79,7 @@ public class Health : MonoBehaviour
         {
             // For enemy
             gameObject.layer = 8;
+            Debug.Log("enabling attack collision");
         }
         else
         {

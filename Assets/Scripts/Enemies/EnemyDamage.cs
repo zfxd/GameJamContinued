@@ -65,6 +65,7 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("Hit by attack" + other.tag);
             // Player Damage 1
             gameObject.layer = 9;
+            Debug.Log("Disabling attack collision");
             health.TakeDamage(1);
             return; // Return early because we want the same ability cast to hit multiple times
                     // IF AND ONLY IF it's the correct color
@@ -91,38 +92,5 @@ public class EnemyDamage : MonoBehaviour
             gameObject.layer = 9; // Begin invuln period
             health.TakeDamage(1);
         }
-    }
-
-    private void OnTriggerExit2D()
-    {
-        Debug.Log("Enabling attack collision");
-        gameObject.layer = 8;
-    }
-
-    private IEnumerator ReenableAttack()
-    {
-        bool loop = true;
-        List<Collider2D> results = new List<Collider2D>();
-        ContactFilter2D cf = new ContactFilter2D().NoFilter();
-        // Check that an attack hitbox NO LONGER overlaps this enemy
-        while (loop)
-        {
-            Debug.Log("Loop");
-            loop = false;
-            boxcollider.OverlapCollider(cf, results);
-            foreach (Collider2D n in results)
-            {
-                Debug.Log(n);
-                if (n.gameObject.layer == 6)
-                {
-                    loop = true;
-                }
-            }
-            yield return new WaitForEndOfFrame();
-        }
-        Debug.Log("out of loop");
-        // Re-enable attack hits
-        Debug.Log("Re-enabling hits");
-        gameObject.layer = 8; // Back to the Enemy layer
     }
 }
