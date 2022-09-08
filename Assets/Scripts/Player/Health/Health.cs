@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     private Rigidbody2D body;
     private PlayerMovement move;
 
+    public bool invuln {get; private set;}
+
     [SerializeField] private float iFrameDuration;
     [SerializeField] private float numFlashes;
     private SpriteRenderer sprite;
@@ -59,6 +61,7 @@ public class Health : MonoBehaviour
 
     private IEnumerator Invulnerability()
     {
+        invuln = true;
         // Made invulnerable on collision
 
         for(int i = 0; i < numFlashes; i++)
@@ -71,9 +74,18 @@ public class Health : MonoBehaviour
             sprite.color = temp;
             yield return new WaitForSeconds(iFrameDuration / (numFlashes * 2));
         }
-        Physics2D.IgnoreLayerCollision(7,8,false);
-        Physics2D.IgnoreLayerCollision(6,8,false);
-        // Just turn both back on don't need to care
+
+        if (gameObject.layer == 9)
+        {
+            // For enemy
+            gameObject.layer = 8;
+        }
+        else
+        {
+            // For player
+            Physics2D.IgnoreLayerCollision(7,8,false);
+        }
+        invuln = false;
     }
 
     // Ignore collision w/ player, wait a bit, then despawn

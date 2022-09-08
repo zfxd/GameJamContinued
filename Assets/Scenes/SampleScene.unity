@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 108598175}
   - component: {fileID: 108598176}
   - component: {fileID: 108598177}
+  - component: {fileID: 108598178}
   m_Layer: 6
   m_Name: AttackBlue
   m_TagString: Blue
@@ -224,7 +225,7 @@ BoxCollider2D:
   m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -251,6 +252,27 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
+--- !u!50 &108598178
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108598173}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &123174272
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353973613}
   m_Layer: 6
-  m_Name: Attacks
+  m_Name: ProjectileAttacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1342,32 +1364,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 379132382887939999, guid: f16046ca297bce64a8d1fba6564dfde8, type: 3}
   m_PrefabInstance: {fileID: 379132382098057352}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &825190171
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825190166}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.34500003, y: -0.13}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2888889}
-    oldSize: {x: 0.69, y: 0.45}
-    newSize: {x: 0.69, y: 0.45}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.000100016594, y: 0.0001}
-  m_EdgeRadius: 0
 --- !u!1 &835819380
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,6 +3136,7 @@ GameObject:
   - component: {fileID: 1943475294}
   - component: {fileID: 1943475295}
   - component: {fileID: 1943475296}
+  - component: {fileID: 1943475297}
   m_Layer: 6
   m_Name: AttackRed
   m_TagString: Red
@@ -3256,7 +3253,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008688241, y: 0.12090113}
@@ -3272,6 +3269,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28312612, y: 0.19798811}
   m_EdgeRadius: 0
+--- !u!50 &1943475297
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943475291}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2120187937
 GameObject:
   m_ObjectHideFlags: 0

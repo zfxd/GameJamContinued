@@ -34,6 +34,7 @@ public class EnemyDamage : MonoBehaviour
             other.GetComponent<Health>().TakeDamage(damage);
         }
 
+        /* MOVE THIS CODE TO ONTRIGGER ENTER
         // Take damage if hit by correctly colored attack
         if (other.tag == gameObject.tag)
         {
@@ -51,7 +52,51 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("Disabling attack collision");
             gameObject.layer = 9; // Layer9 is IgnoreAttacks layer
             StartCoroutine(ReenableAttack());
+        } */
+    }
+
+// Attacks are triggers..
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("COLLIDERENTER MUSHROOM");
+        // Take damage if hit by correctly colored attack
+        if (other.tag == gameObject.tag && !health.invuln)
+        {
+            Debug.Log("Hit by attack" + other.tag);
+            // Player Damage 1
+            gameObject.layer = 9;
+            health.TakeDamage(1);
+            return; // Return early because we want the same ability cast to hit multiple times
+                    // IF AND ONLY IF it's the correct color
         }
+        
+        // DO I EVEN NEED THIS NOW THAT THEY'RE TRIGGERS??
+        // Disable further attack collisions until the attack no longer overlaps
+        // This allows harmless attacks to pass through the enemy
+        if (other.gameObject.layer == 6)
+        {
+            Debug.Log("Disabling attack collision");
+            gameObject.layer = 9; // Layer9 is IgnoreAttacks layer
+            // StartCoroutine(ReenableAttack());
+        }        
+    }
+
+// For ongoing sources of damage like red, purple, green 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == gameObject.tag && !health.invuln)
+        {
+            Debug.Log("Hit by attack" + other.tag);
+            // Player Damage 1
+            gameObject.layer = 9; // Begin invuln period
+            health.TakeDamage(1);
+        }
+    }
+
+    private void OnTriggerExit2D()
+    {
+        Debug.Log("Enabling attack collision");
+        gameObject.layer = 8;
     }
 
     private IEnumerator ReenableAttack()
