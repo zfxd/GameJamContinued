@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7694456078104164281}
   - component: {fileID: 7694456078104164286}
   - component: {fileID: 7485891898458655247}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GreenPuddle
-  m_TagString: Untagged
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

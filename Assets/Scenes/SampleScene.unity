@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 457651302}
   m_Layer: 8
   m_Name: Mushroom
-  m_TagString: Blue
+  m_TagString: Green
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95edfffcda5a24e4997c3069dad1e71f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 3
+  startHealth: 10
   iFrameDuration: 1
   numFlashes: 2
   knockbackForce: 3
@@ -3374,7 +3374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 379132382887939998, guid: f16046ca297bce64a8d1fba6564dfde8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 379132382887939999, guid: f16046ca297bce64a8d1fba6564dfde8, type: 3}
       propertyPath: m_RootOrder
@@ -3419,6 +3419,10 @@ PrefabInstance:
     - target: {fileID: 379132382887939999, guid: f16046ca297bce64a8d1fba6564dfde8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 796129726211256470, guid: f16046ca297bce64a8d1fba6564dfde8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f16046ca297bce64a8d1fba6564dfde8, type: 3}
@@ -3480,10 +3484,6 @@ PrefabInstance:
     - target: {fileID: 1037925351411393035, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
       propertyPath: m_Name
       value: PurpleCloud
-      objectReference: {fileID: 0}
-    - target: {fileID: 1037925351411393035, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1037925351411393035, guid: db92bf913cf1f924f8404e0396957c7c, type: 3}
       propertyPath: m_IsActive
@@ -3610,10 +3610,6 @@ PrefabInstance:
     - target: {fileID: 7694456078104164292, guid: 60407264064b4ad48acba7336568d424, type: 3}
       propertyPath: m_Name
       value: GreenPuddle
-      objectReference: {fileID: 0}
-    - target: {fileID: 7694456078104164292, guid: 60407264064b4ad48acba7336568d424, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7694456078104164293, guid: 60407264064b4ad48acba7336568d424, type: 3}
       propertyPath: m_RootOrder

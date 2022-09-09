@@ -71,7 +71,7 @@ public class EnemyDamage : MonoBehaviour
                     // IF AND ONLY IF it's the correct color
         }
         
-        // DO I EVEN NEED THIS NOW THAT THEY'RE TRIGGERS??
+        /*/ DO I EVEN NEED THIS NOW THAT THEY'RE TRIGGERS??
         // Disable further attack collisions until the attack no longer overlaps
         // This allows harmless attacks to pass through the enemy
         if (other.gameObject.layer == 6)
@@ -79,18 +79,16 @@ public class EnemyDamage : MonoBehaviour
             Debug.Log("Disabling attack collision");
             gameObject.layer = 9; // Layer9 is IgnoreAttacks layer
             // StartCoroutine(ReenableAttack());
-        }        
+        }       */ 
     }
 
-// For ongoing sources of damage like red, purple, green 
-    private void OnTriggerStay2D(Collider2D other)
+    /*/ Allow attacks to hit again if no damage was taken
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == gameObject.tag && !health.invuln)
+        if (!health.invuln)
         {
-            Debug.Log("Hit by attack" + other.tag);
-            // Player Damage 1
-            gameObject.layer = 9; // Begin invuln period
-            health.TakeDamage(1);
+            Debug.Log("Re-enabling attack collision");  
+            gameObject.layer = 8;
         }
-    }
+    }*/
 }
