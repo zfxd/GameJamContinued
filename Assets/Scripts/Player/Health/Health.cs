@@ -96,6 +96,5 @@ public class Health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6,8,true); // Enemy and attack 
         // TODO wait a while then despawn.
         yield return new WaitForSeconds(2.0f);
-        Debug.Log("TODO DESPAWN HERE"); 
     }
 }

@@ -9,7 +9,7 @@ public class EnemyDamage : MonoBehaviour
 
     private Health health;
     private new Rigidbody2D rigidbody;
-    private BoxCollider2D boxcollider;
+    public BoxCollider2D boxcollider;
     
     private void Awake()
     {
@@ -80,6 +80,24 @@ public class EnemyDamage : MonoBehaviour
             gameObject.layer = 9; // Layer9 is IgnoreAttacks layer
             // StartCoroutine(ReenableAttack());
         }       */ 
+    }
+
+    
+    // Ignore collision w/ player, wait a bit, then despawn 
+
+    private IEnumerator EnemyDeath()
+    {
+        // THERE IS SOMETHING WRONG WITH THIS FUNCTION!
+        this.gameObject.layer = 10;
+        Debug.Log("Moving " + gameObject + " to layer 10");
+        Physics2D.IgnoreLayerCollision(7,8,false);
+        Physics2D.IgnoreLayerCollision(6,8,false);
+        // Forcing layer collisions back on
+        // WHY ARE LAYER COLLISIONS TURNING OFF FOR NO REASON?
+        // TODO find out WHY
+        // TODO wait a while then despawn.
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("TODO DESPAWN");
     }
 
     /*/ Allow attacks to hit again if no damage was taken
