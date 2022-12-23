@@ -11,11 +11,12 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] Image centre;
 
     public State color {get; private set;}
-    public enum State {EMPTY, 
-                RED, 
+    public enum State {EMPTY,
+
+                RED,
                 BLUE,
-                YELLOW, 
-                PURPLE, 
+                YELLOW,
+                PURPLE,
                 GREEN, 
                 ORANGE}
 
@@ -251,9 +252,12 @@ public class PlayerAttack : MonoBehaviour
 
     private void atkOrange()
     {
+        // Draw a raycast to determine the point of explosion
+        LayerMask atks = LayerMask.GetMask("Attacks") | LayerMask.GetMask("IgnoreAttacksAndPlayer");
+        // Do I want to include the "IgnoreAttacks" layer too.. I'm not sure if they will ever collide
         Vector2 dir = new Vector2(transform.localScale.x, 0);
         Vector3 dirDebug = new Vector3(transform.localScale.x, 0, 0);
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.transform.position, dir);
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.transform.position, dir, Mathf.Infinity, ~atks);
         if (hit.collider != null)
         {
             Debug.DrawRay(firePoint.transform.position, dirDebug * hit.distance/3, Color.yellow, 3);
