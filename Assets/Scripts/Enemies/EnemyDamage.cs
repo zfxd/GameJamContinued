@@ -58,7 +58,7 @@ public class EnemyDamage : MonoBehaviour
 // Attacks are triggers..
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("COLLIDERENTER MUSHROOM");
+        Debug.Log("TRIGGERENTER MUSHROOM");
         // Take damage if hit by correctly colored attack
         if (other.tag == gameObject.tag && !health.invuln)
         {

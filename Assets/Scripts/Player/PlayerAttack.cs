@@ -37,11 +37,13 @@ public class PlayerAttack : MonoBehaviour
     // Making attacks work
     [SerializeField] private Transform firePoint;
     [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Transform blueSpawn;
     [SerializeField] private GameObject[] yellowProjectiles;
     [SerializeField] private GameObject[] greenPuddles;
     [SerializeField] private GameObject[] purpleClouds;
     [SerializeField] private GameObject[] orangeExplosion;
     [SerializeField] private GameObject redFire;
+    [SerializeField] private GameObject blueBlock;
     private GameObject currSpell;
     
 
@@ -240,7 +242,8 @@ public class PlayerAttack : MonoBehaviour
    
     private void atkBlue()
     {
-        
+        blueBlock.transform.position = blueSpawn.position;
+        blueBlock.gameObject.SetActive(true);
     }
 
     private void atkYellow()

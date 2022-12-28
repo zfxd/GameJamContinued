@@ -107,12 +107,12 @@ TextureImporter:
       name: Blue Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 10
+        y: 32
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,12 +128,12 @@ TextureImporter:
       name: Blue Sheet_1
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 40
+        y: 32
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,12 +149,12 @@ TextureImporter:
       name: Blue Sheet_2
       rect:
         serializedVersion: 2
-        x: 60
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 70
+        y: 32
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,12 +170,12 @@ TextureImporter:
       name: Blue Sheet_3
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 100
+        y: 32
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: Blue Sheet_4
       rect:
         serializedVersion: 2
-        x: 120
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 130
+        y: 32
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,12 +212,12 @@ TextureImporter:
       name: Blue Sheet_5
       rect:
         serializedVersion: 2
-        x: 150
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 160
+        y: 27
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,12 +233,12 @@ TextureImporter:
       name: Blue Sheet_6
       rect:
         serializedVersion: 2
-        x: 180
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 190
+        y: 19
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,12 +254,12 @@ TextureImporter:
       name: Blue Sheet_7
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 214
+        y: 3
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: Blue Sheet_8
       rect:
         serializedVersion: 2
-        x: 240
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 243
+        y: 2
+        width: 24
+        height: 12
+      alignment: 9
+      pivot: {x: 0.50000125, y: 0.5882066}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -296,12 +296,12 @@ TextureImporter:
       name: Blue Sheet_9
       rect:
         serializedVersion: 2
-        x: 270
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 272
+        y: 3
+        width: 25
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5211707, y: 0.45589638}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -317,12 +317,12 @@ TextureImporter:
       name: Blue Sheet_10
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 304
+        y: 4
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,12 +338,12 @@ TextureImporter:
       name: Blue Sheet_11
       rect:
         serializedVersion: 2
-        x: 330
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 340
+        y: 4
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,12 +359,12 @@ TextureImporter:
       name: Blue Sheet_12
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 370
+        y: 4
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,12 +380,12 @@ TextureImporter:
       name: Blue Sheet_13
       rect:
         serializedVersion: 2
-        x: 390
-        y: 0
-        width: 30
-        height: 45
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 402
+        y: 4
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
