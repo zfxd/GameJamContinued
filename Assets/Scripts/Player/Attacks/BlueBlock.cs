@@ -5,8 +5,10 @@ using UnityEngine;
 public class BlueBlock : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float _lifetime;
     private Animator anim;
     private Rigidbody2D rb;
+    private float lifetime;
 
     private void Awake()
     {
@@ -17,6 +19,9 @@ public class BlueBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        lifetime += Time.deltaTime;
+        if (lifetime > _lifetime)
+            Deactivate();
     }
 
     // Set velocity
@@ -40,5 +45,6 @@ public class BlueBlock : MonoBehaviour
     private void Deactivate()
     {
         gameObject.SetActive(false);
+        lifetime = 0;
     }
 }

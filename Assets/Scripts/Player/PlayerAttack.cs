@@ -42,8 +42,8 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private GameObject[] greenPuddles;
     [SerializeField] private GameObject[] purpleClouds;
     [SerializeField] private GameObject[] orangeExplosion;
+    [SerializeField] private GameObject[] blueBlocks;
     [SerializeField] private GameObject redFire;
-    [SerializeField] private GameObject blueBlock;
     private GameObject currSpell;
     
 
@@ -242,8 +242,9 @@ public class PlayerAttack : MonoBehaviour
    
     private void atkBlue()
     {
-        blueBlock.transform.position = blueSpawn.position;
-        blueBlock.gameObject.SetActive(true);
+        currSpell = blueBlocks[FindInList(blueBlocks)];
+        currSpell.transform.position = blueSpawn.position;
+        currSpell.gameObject.SetActive(true);
     }
 
     private void atkYellow()
