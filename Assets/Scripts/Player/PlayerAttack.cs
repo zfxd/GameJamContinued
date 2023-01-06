@@ -293,9 +293,10 @@ public class PlayerAttack : MonoBehaviour
         // If not use the spawn point
         else {
             currSpell.transform.position = spawnPoint.position;
-            currSpell.GetComponent<PurpleCloud>().Drop();
         }
         currSpell.GetComponent<PurpleCloud>().SetDirection(Mathf.Sign(transform.localScale.x));
+        // Check if grounded
+        // If not grounded, drop.
     }
 
     private void atkGreen()
