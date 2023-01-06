@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec4bc6ff7585ad4fabd2fd0de49181d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 8
 --- !u!61 &1037925351411393078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 1037925351411393035}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -165,5 +166,5 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4

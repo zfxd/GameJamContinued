@@ -278,7 +278,23 @@ public class PlayerAttack : MonoBehaviour
     private void atkPurple()
     {
         currSpell = purpleClouds[FindInList(purpleClouds)];
-        currSpell.transform.position = spawnPoint.position;
+        Vector2 dir = new Vector2(transform.localScale.x, 0).normalized;
+        LayerMask toHit = LayerMask.GetMask("Ground") | LayerMask.GetMask("IgnoreAttacksAndPlayer");  
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(firePoint.transform.position.x,
+            firePoint.transform.position.y - .2f), dir, 1.862f, toHit);
+        Debug.DrawRay(new Vector2(firePoint.transform.position.x,
+            firePoint.transform.position.y - .2f), dir, Color.yellow, 1.862f);
+        if (hit) {
+            // If there's a wall in the way, then spawn it at the wall
+            // If the spawn point is in mid-air, spawn at the edge of the closest ground
+            // (I have a collider which will collide with the raycast at the edge of platforms)
+            currSpell.transform.position = hit.point;
+        }
+        // If not use the spawn point
+        else {
+            currSpell.transform.position = spawnPoint.position;
+            currSpell.GetComponent<PurpleCloud>().Drop();
+        }
         currSpell.GetComponent<PurpleCloud>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
