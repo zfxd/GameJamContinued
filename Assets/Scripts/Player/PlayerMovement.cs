@@ -55,17 +55,13 @@ public class PlayerMovement : MonoBehaviour
         body.velocity = new Vector2(body.velocity.x, jumpHeight);
     }
 
-    // what was this again
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
-
     private bool isGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
+
+    // Used by animation events to lock out movement during attacks
     public void LoseControl()
     {
         anim.SetBool("grounded", true);

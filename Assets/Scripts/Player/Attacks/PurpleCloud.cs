@@ -20,6 +20,7 @@ public class PurpleCloud : MonoBehaviour
     {
     }
 
+    // Called by animator
     public void Drop()
     {
         rb.velocity = new Vector3(0, -1 * speed, 0);

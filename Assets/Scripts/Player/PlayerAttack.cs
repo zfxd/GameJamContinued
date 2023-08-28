@@ -279,20 +279,20 @@ public class PlayerAttack : MonoBehaviour
     {
         currSpell = purpleClouds[FindInList(purpleClouds)];
         Vector2 dir = new Vector2(transform.localScale.x, 0).normalized;
-        LayerMask toHit = LayerMask.GetMask("Ground") | LayerMask.GetMask("IgnoreAttacksAndPlayer");  
+        LayerMask toHit = LayerMask.GetMask("Ground");  
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(firePoint.transform.position.x,
             firePoint.transform.position.y - .2f), dir, 1.862f, toHit);
         Debug.DrawRay(new Vector2(firePoint.transform.position.x,
             firePoint.transform.position.y - .2f), dir, Color.yellow, 1.862f);
         if (hit) {
             // If there's a wall in the way, then spawn it at the wall
-            // If the spawn point is in mid-air, spawn at the edge of the closest ground
+            // If the spawn point goes over an edge
             // (I have a collider which will collide with the raycast at the edge of platforms)
-            currSpell.transform.position = hit.point;
+            currSpell.transform.position = hit.point + new Vector2(0,0.1f);
         }
-        // If not use the spawn point
+        // If not use the spawn point, if it is in mid air it will fall (see PurpleCloud.cs)
         else {
-            currSpell.transform.position = spawnPoint.position;
+            currSpell.transform.position = spawnPoint.position + new Vector3(0,0.1f,0);
         }
         currSpell.GetComponent<PurpleCloud>().SetDirection(Mathf.Sign(transform.localScale.x));
         // Check if grounded
