@@ -418,6 +418,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Green_0
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 31
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f2ed03189bfc245b5e9ba8df8bfaff
+      internalID: -230555914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -440,6 +461,7 @@ TextureImporter:
       Green Sheet_2: 6122496666883249634
       Green Sheet_8: 9091344755023276410
       Green Sheet_0: -2833894017363538070
+      Green_0: 1748238302
       Green Sheet_11: -7440586932554378405
       Green Sheet_3: 2659210889205894474
       Green Sheet_14: 7315089810402683183

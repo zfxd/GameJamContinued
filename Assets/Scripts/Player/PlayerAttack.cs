@@ -40,6 +40,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private Transform blueSpawn;
     [SerializeField] private GameObject[] yellowProjectiles;
     [SerializeField] private GameObject[] greenPuddles;
+    [SerializeField] private GameObject[] greenOrbs;
     [SerializeField] private GameObject[] purpleClouds;
     [SerializeField] private GameObject[] orangeExplosion;
     [SerializeField] private GameObject[] blueBlocks;
@@ -301,8 +302,15 @@ public class PlayerAttack : MonoBehaviour
 
     private void atkGreen()
     {
-        greenPuddles[FindInList(greenPuddles)].transform.position = spawnPoint.position;
-        greenPuddles[FindInList(greenPuddles)].GetComponent<GreenPuddle>().SetDirection(Mathf.Sign(transform.localScale.x)); // same here
+        // New green behavior - we want to spawn a projectile like blue
+        currSpell = greenOrbs[FindInList(greenOrbs)];
+        currSpell.transform.position = blueSpawn.position;
+        currSpell.GetComponent<GreenOrb>().SetDirection(Mathf.Sign(transform.localScale.x)); 
+        
+
+        // Old green behavior
+        // greenPuddles[FindInList(greenPuddles)].transform.position = spawnPoint.position;
+        // greenPuddles[FindInList(greenPuddles)].GetComponent<GreenPuddle>().SetDirection(Mathf.Sign(transform.localScale.x)); // same here
     }
 
     private int FindInList(GameObject[] list)
