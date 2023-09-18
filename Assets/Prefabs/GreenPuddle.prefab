@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7694456078104164281}
   - component: {fileID: 7694456078104164286}
   - component: {fileID: 7485891898458655247}
+  - component: {fileID: 8686522335200582080}
   m_Layer: 6
   m_Name: GreenPuddle
   m_TagString: Green
@@ -115,8 +116,8 @@ BoxCollider2D:
   m_Offset: {x: -0.002875179, y: -0.00689965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.6629238, y: 0.16847827}
-    oldSize: {x: 1.37, y: 0.46023437}
+    pivot: {x: 0.5, y: 0.7521437}
+    oldSize: {x: 0.52000004, y: 0.08004076}
     newSize: {x: 1.37, y: 0.46023437}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -159,3 +160,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &8686522335200582080
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694456078104164292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2db4a19114bc746489c8689266decca5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

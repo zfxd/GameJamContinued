@@ -6,6 +6,7 @@ public class GreenPuddle : MonoBehaviour
 {
     [SerializeField] private float _lifetime;
     private float lifetime;
+    private float lastRotation = 0f;
 
     private BoxCollider2D boxCollider;
     
@@ -23,11 +24,15 @@ public class GreenPuddle : MonoBehaviour
     }
 
     // Initializing values and flipping sprite as needed
-    public void SetDirection(float _direction)
+    public void SetDirection(float _direction, float _r /*rotation*/)
     {
+        transform.Rotate(0,0,lastRotation);
+        lastRotation = _r;
         gameObject.SetActive(true);
         boxCollider.enabled = true;
         lifetime = 0;
+        // rotation before scale
+        transform.Rotate(0,0,_r);
         float localScaleX = transform.localScale.x;
         if (Mathf.Sign(localScaleX) != _direction)
             localScaleX = -localScaleX;

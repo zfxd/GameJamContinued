@@ -314,36 +314,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Green Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 1507
-        y: 0
-        width: 137
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a889009b5d748b4e9bc0d4facb3e5c5
-      internalID: 4338643997242437102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Green Sheet_11
       rect:
         serializedVersion: 2
-        x: 1644
-        y: 0
-        width: 137
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1710
+        y: 2
+        width: 48
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5, y: 0.41768405}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -359,12 +338,12 @@ TextureImporter:
       name: Green Sheet_12
       rect:
         serializedVersion: 2
-        x: 1781
+        x: 1847
         y: 0
-        width: 137
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 49
+        height: 13
+      alignment: 9
+      pivot: {x: 0.500005, y: 0.6010934}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -380,12 +359,12 @@ TextureImporter:
       name: Green Sheet_13
       rect:
         serializedVersion: 2
-        x: 1918
-        y: 0
-        width: 137
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1984
+        y: 1
+        width: 51
+        height: 7
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -401,12 +380,12 @@ TextureImporter:
       name: Green Sheet_14
       rect:
         serializedVersion: 2
-        x: 2055
+        x: 2120
         y: 0
-        width: 137
-        height: 46
+        width: 52
+        height: 8
       alignment: 9
-      pivot: {x: 0.6629238, y: 0.16847827}
+      pivot: {x: 0.5, y: 0.7521437}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -427,7 +406,7 @@ TextureImporter:
         width: 7
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -435,6 +414,27 @@ TextureImporter:
       bones: []
       spriteID: 73f2ed03189bfc245b5e9ba8df8bfaff
       internalID: -230555914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_1
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 4
+        width: 40
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20573318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9c56a212c5543943966f95c995f4786
+      internalID: 360584571
       vertices: []
       indices: 
       edges: []
@@ -464,6 +464,7 @@ TextureImporter:
       Green_0: 1748238302
       Green Sheet_11: -7440586932554378405
       Green Sheet_3: 2659210889205894474
+      Green_1: 360584571
       Green Sheet_14: 7315089810402683183
       Green Sheet_4: 8531934650095458595
   spritePackingTag: 
